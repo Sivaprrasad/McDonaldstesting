@@ -56,12 +56,16 @@ public class myMcdTests {
 		
 		//getting postal code id and inserting.
 		WebElement postalCodeInput = driver.findElement(By.id("postalcode2"));
-		postalCodeInput.sendKeys("m1h");
+		postalCodeInput.sendKeys("  m1h");
 		String pcode = postalCodeInput.getText();
 		
 		//getting subscribe button id and clicking
 		WebElement subscribeButton = driver.findElement(By.id("g-recaptcha-btn-2"));
 		subscribeButton.click();
+		
+// <div class="verify-button-holder"><button class="rc-button-default goog-inline-block" title="" 
+//		value="" 
+//		id="recaptcha-verify-button" tabindex="0">Verify</button></div>
 		
 		// Trying for auto click Verify captcha button
 //		//Getting Verify Captcha Button and Clicking
