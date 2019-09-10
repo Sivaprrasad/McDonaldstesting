@@ -41,5 +41,29 @@ public class myMcdTests {
 		assertEquals("Subscribe to My McD’s®", actualTitle);
 		
 	}
+	
+	@Test
+	public void testEmailSignupHappyPath() {
+		//getting fistname textfield id and inserting 
+		WebElement firstNameInput = driver.findElement(By.id("firstname2"));
+		firstNameInput.sendKeys("SivaPrasad");
+		String fname = firstNameInput.getText();
+		
+		//getting email textfield id and inserting
+		WebElement emailInput = driver.findElement(By.id("email2"));
+		emailInput.sendKeys("usivaprasad95@gmail.com");
+		String email = emailInput.getText();
+		
+		//getting postal code id and inserting.
+		WebElement postalCodeInput = driver.findElement(By.id("postalcode2"));
+		postalCodeInput.sendKeys("m1h");
+		String pcode = postalCodeInput.getText();
+		
+		//getting subscribe button id and clicking
+		WebElement subscribeButton = driver.findElement(By.id("g-recaptcha-btn-2"));
+		subscribeButton.click();
+		
+		
+	}
 
 }
