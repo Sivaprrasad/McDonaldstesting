@@ -32,11 +32,13 @@ public class myMcdTests {
 	@Test
 	public void testTitleSubscription() {
 		
+		
 		//Getting the Title of McD Subscription
-		WebElement title = driver.findElement(By.cssSelector("h2.click-before-outline"));
+		WebElement title = driver.findElement(By.className("click-before-outline"));
 		String actualTitle = title.getText();
+		
 		//checking Actual = Expected
-		assertEquals("Subscribe to My McD’s", actualTitle);
+		assertEquals("Subscribe to My McD’s®", actualTitle);
 		
 	}
 
