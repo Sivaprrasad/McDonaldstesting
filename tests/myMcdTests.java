@@ -63,6 +63,38 @@ public class myMcdTests {
 		WebElement subscribeButton = driver.findElement(By.id("g-recaptcha-btn-2"));
 		subscribeButton.click();
 		
+		// Trying for auto click Verify captcha button
+//		//Getting Verify Captcha Button and Clicking
+//		WebElement verifyCaptchaButton = driver.findElement(By.className("rc-button-default goog-inline-block"));
+//		verifyCaptchaButton.click();
+	}
+	
+	@Test
+	public void testEmailSignupNegativePath() {
+		
+		WebElement firstNameInput = driver.findElement(By.id("firstname2"));
+		firstNameInput.sendKeys("");
+		String fname = firstNameInput.getText();
+		
+		WebElement emailInput = driver.findElement(By.id("email2"));
+		emailInput.sendKeys("");
+		String email = emailInput.getText();
+		
+		//Inserting WRONG INPUT in postal code input..
+		WebElement postalCodeInput = driver.findElement(By.id("postalcode2"));
+		postalCodeInput.sendKeys("");
+		String pcode = postalCodeInput.getText();
+		
+		//getting subscribe button id and clicking
+		WebElement subscribeButton = driver.findElement(By.id("g-recaptcha-btn-2"));
+		subscribeButton.click();
+		
+		// Trying for auto click Verify captcha button
+//		//Getting Verify Captcha Button and Clicking
+//		WebElement verifyCaptchaButton = driver.findElement(By.cssSelector("rc-button-default.goog-inline-block"));
+//				//("rc-button-default goog-inline-block"));
+//				//recaptcha-verify-button
+//		verifyCaptchaButton.click();
 		
 	}
 
