@@ -21,6 +21,10 @@ public class myMcdTests {
 		
 		//Given target website
 		driver.get("https://www.mcdonalds.com/ca/en-ca.html");
+		
+		//As McD website is giving an ad each time when visited..
+		//Given cssSelector path to close the ad.
+		driver.findElement(By.cssSelector("#maincontent > div:nth-child(2) > div:nth-child(2) > div > div.modal-window-base.en.open > div > a")).click();
 	}
 
 	@After
@@ -69,7 +73,7 @@ public class myMcdTests {
 		
 		// Trying for auto click Verify captcha button
 //		//Getting Verify Captcha Button and Clicking
-//		WebElement verifyCaptchaButton = driver.findElement(By.className("rc-button-default goog-inline-block"));
+//		WebElement verifyCaptchaButton = driver.findElement(By.className("rc-button-default.goog-inline-block"));
 //		verifyCaptchaButton.click();
 	}
 	
@@ -95,10 +99,12 @@ public class myMcdTests {
 		
 		// Trying for auto click Verify captcha button
 //		//Getting Verify Captcha Button and Clicking
-//		WebElement verifyCaptchaButton = driver.findElement(By.cssSelector("rc-button-default.goog-inline-block"));
-//				//("rc-button-default goog-inline-block"));
-//				//recaptcha-verify-button
+//		WebElement verifyCaptchaButton = driver.findElement(By.cssSelector("div#verify-button-holder.recaptcha-verify-button"));
 //		verifyCaptchaButton.click();
+		//div.verify-button-holder
+				//("rc-button-default goog-inline-block"));
+				//recaptcha-verify-button
+		
 		
 	}
 
